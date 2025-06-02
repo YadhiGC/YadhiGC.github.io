@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedagogía</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-image: url('https://2.bp.blogspot.com/-ueFGGbLEqn8/Vrsj9FDemYI/AAAAAAAAhlg/lLuD9Sw6LUY/s1600/Atardecer%2Ben%2BSantorini%252C%2BGrecia.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #0000FF;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .intro-box {
+      background-color: rgba(255, 255, 255, 0.75);
+      padding: 30px 50px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .intro-box h1 {
+      font-size: 48px;
+      color: #800000;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #fff;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .intro-box p {
+      font-size: 20px;
+      color: #4b0082;
+      margin-bottom: 25px;
+    }
+
+    .btn-entrar, .boton-link-vino, .btn-musica {
+      background-color: #800000;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.3s ease, background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-entrar:hover,
+    .boton-link-vino:hover,
+    .btn-musica:hover {
+      background-color: #a52a2a;
+      transform: scale(1.1);
+    }
+
+    .contenido {
+      background-color: rgba(255, 255, 255, 0.75);
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 1000px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    .contenido.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      font-style: italic;
+      color: #0000FF;
+    }
+
+    h3 {
+      text-align: center;
+      font-style: italic;
+      color: #006400;
+    }
+
+    .grecia {
+      font-size: 45px;
+      font-family: 'Brush Script MT', cursive;
+      font-weight: bold;
+      color: #0000FF;
+      text-align: center;
+      margin-top: 30px;
+      text-shadow: 2px 2px 4px #aaa;
+    }
+
+    .tabla-7r {
+      margin: 30px auto;
+      text-align: center;
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    .tabla-7r th, .tabla-7r td {
+      border: 1px solid #0000FF;
+      padding: 10px;
+      background-color: #fff0f5;
+    }
+
+    .tabla-7r th {
+      background-color: #ffb6c1;
+      color: #000080;
+    }
+
+    details {
+      margin: 20px 50px;
+      transition: all 0.4s ease;
+    }
+
+    summary {
+      font-size: 20px;
+      font-weight: bold;
+      color: #800080;
+      cursor: pointer;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+
+    img {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <div class="intro-box">
+      <h1>Bienvenido a mi página</h1>
+      <p>Por Yadhi GC</p>
+      <a href="#contenido-principal">
+        <button class="btn-entrar">Entrar</button>
+      </a>
+      <a href="yad1.html" class="boton-link-vino">Volver a Página 1</a>
+      <a href="yad3.html" class="boton-link-vino">Ir a Página 3</a>
+      <button class="btn-musica" onclick="toggleMusic()">🎵 Música</button>
+    </div>
+    <audio id="musica-fondo" preload="auto" loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio HTML5.
+    </audio>
+  </div>
+
+  <div id="contenido-principal" class="contenido">
+    <h1>Pedagogía</h1>
+    <h3>Es importante tener habilidades como empatía, paciencia, buena comunicación, liderazgo y vocación de servicio para desempeñarse con éxito en esta carrera.</h3>
+
+    <div class="grecia">Grecia</div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <img src="https://www.worldatlas.com/upload/59/f0/6f/shutterstock-2055397688-1.jpg" alt="Símbolo de reciclaje" width="300">
+    </div>
+
+    <table class="tabla-7r">
+      <tr>
+        <th>R</th>
+        <th>Significado</th>
+        <th>Importancia</th>
+      </tr>
+      <tr>
+        <td>Reducir</td>
+        <td>Minimizar el consumo y desperdicio</td>
+        <td>Disminuye la huella ecológica</td>
+      </tr>
+      <tr>
+        <td>Reutilizar</td>
+        <td>Dar nuevos usos a los materiales</td>
+        <td>Alarga la vida útil de los productos</td>
+      </tr>
+      <tr>
+        <td>Reciclar</td>
+        <td>Convertir residuos en nuevos productos</td>
+        <td>Reduce la contaminación y uso de recursos</td>
+      </tr>
+      <tr>
+        <td>Reparar</td>
+        <td>Arreglar objetos en vez de desecharlos</td>
+        <td>Promueve un consumo responsable</td>
+      </tr>
+      <tr>
+        <td>Rechazar</td>
+        <td>Evitar productos no sostenibles</td>
+        <td>Fomenta el consumo consciente</td>
+      </tr>
+      <tr>
+        <td>Reflexionar</td>
+        <td>Analizar nuestros hábitos de consumo</td>
+        <td>Genera conciencia ambiental</td>
+      </tr>
+      <tr>
+        <td>Redistribuir</td>
+        <td>Compartir recursos de manera equitativa</td>
+        <td>Reduce el desperdicio y promueve la equidad</td>
+      </tr>
+    </table>
+
+    <details><summary>1er Semestre</summary><p>Matemáticas 1</p><p>Taller de Lectura 1</p><p>Química 1</p><p>Inglés 1</p><p>Informática 1</p><p>Orientación Educativa</p><p>Metodología</p><p>Ética 1</p><p>Educación Física</p></details>
+    <details><summary>2do Semestre</summary><p>Matemáticas 2</p><p>Taller de Lectura 2</p><p>Química 2</p><p>Inglés 2</p><p>Informática 2</p><p>Ética 2</p><p>Orientación Educativa 2</p><p>Educación Física</p></details>
+    <details><summary>3er Semestre</summary><p>Matemáticas 3</p><p>Biología</p><p>Física 1</p><p>Historia</p><p>Literatura</p><p>Inglés 3</p><p>Ética y valores</p></details>
+    <details><summary>4to Semestre</summary><p>Física 2</p><p>Ecología</p><p>Historia 2</p><p>Inglés 4</p><p>Literatura 2</p><p>Introducción a la pedagogía</p><p>Educación física</p></details>
+    <details><summary>5to Semestre</summary><p>Didáctica</p><p>Psicología de la educación</p><p>Evaluación educativa</p><p>Historia de la educación</p><p>Tecnología educativa</p><p>Teorías pedagógicas</p></details>
+    <details><summary>6to Semestre</summary><p>Práctica docente</p><p>Diseño curricular</p><p>Gestión educativa</p><p>Planeación didáctica</p><p>Desarrollo infantil</p><p>Educación inclusiva</p></details>
+  </div>
+
+  <script>
+    const musica = document.getElementById('musica-fondo');
+    let reproduciendo = false;
+
+    function toggleMusic() {
+      if (reproduciendo) {
+        musica.pause();
+      } else {
+        musica.volume = 0.5;
+        musica.play().catch(error => console.log('Error al reproducir:', error));
+      }
+      reproduciendo = !reproduciendo;
+    }
+
+    window.addEventListener('scroll', function () {
+      const contenido = document.querySelector('.contenido');
+      const posicion = contenido.getBoundingClientRect().top;
+      const alturaPantalla = window.innerHeight;
+      if (posicion < alturaPantalla - 100) {
+        contenido.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
